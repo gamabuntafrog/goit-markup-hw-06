@@ -98,6 +98,7 @@ body {
   line-height: 16px;
   list-style-type: none;
   letter-spacing: 0.02em;
+  padding: 2px;
 }
 .a {
   color: #757575;
@@ -143,6 +144,7 @@ body {
 .contacts-tel {
   display: flex;
   align-items: center;
+  padding: 2px;
 }
 .contacts-mailto,
 .contacts-tel,
@@ -228,9 +230,9 @@ body {
   margin-bottom: 10px;
 }
 .sect-two-svg {
-  width: 270px;
-  height: 120px;
   align-self: center;
+  width: 70px;
+  height: 70px;
 }
 .sect-two-p {
   font-size: 14px;
@@ -254,6 +256,7 @@ body {
 }
 .svg-container {
   background-color: var(--our-team-section-background);
+  border-radius: 3%;
   width: 100%;
   height: 120px;
   display: flex;
@@ -352,7 +355,8 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
-.svg-link-icons:hover {
+.svg-link-icons:hover,
+.svg-link-icons:focus {
   background-color: var(--hover-text-color);
   border-radius: 50%;
   fill: var(--white-text-color);
@@ -365,9 +369,9 @@ body {
   fill: var(--standart-backg-icon-color);
   margin: 0;
 }
-.svg-items:hover {
+.svg-items:hover,
+.svg-items:focus {
   fill: white;
-
   background-size: 44px;
 }
 .sect-four-p {
@@ -388,6 +392,8 @@ body {
 .client-item {
   margin-top: 50px;
   cursor: pointer;
+  width: 100%;
+  height: 92px;
 }
 .clients-list {
   display: flex;
@@ -397,15 +403,13 @@ body {
   height: 92px;
 }
 .svg-clients-offer {
-  display: block;
-  width: 170px;
-  height: 92px;
   border: 1px solid var(--standart-backg-icon-color);
   border-radius: 4px;
   fill: var(--standart-backg-icon-color);
   cursor: pointer;
 }
-.svg-clients-offer:hover {
+.svg-clients-offer:hover,
+.svg-clients-offer:focus {
   fill: var(--hover-text-color);
   border: 1px solid var(--hover-text-color);
 }
@@ -477,7 +481,9 @@ body {
 }
 
 .contacts-mailto-footer:hover,
-.contacts-tel-footer:hover {
+.contacts-tel-footer:hover,
+.contacts-mailto-footer:focus,
+.contacts-tel-footer:focus {
   color: var(--footer-text-color);
 }
 .adress-ul {
@@ -529,7 +535,8 @@ body {
   padding: 6px 22px;
   font-family: inherit;
 }
-.sect-one-button:hover {
+.sect-one-button:hover,
+.sect-one-button:focus {
   color: var(--white-text-color);
   background: var(--hover-text-color);
 }
