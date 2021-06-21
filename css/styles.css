@@ -47,6 +47,7 @@ img {
   --our-team-section-background: #f5f4fa;
   --footer-text-color: rgba(255, 255, 255, 0.6);
   --standart-backg-icon-color: #afb1b8;
+  --thumb-background-color: rgba(33, 150, 243, 0.9);
 }
 
 body {
@@ -54,12 +55,13 @@ body {
   padding: 0;
 }
 .header {
+  width: 100%;
   border-bottom: 1px solid #ececec;
   padding: 24px 0;
+  background-color: white;
 }
 .header-offer {
   width: 1200px;
-
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
@@ -114,7 +116,20 @@ body {
 .nav-li:not(:first-child) {
   margin-left: 50px;
 }
-
+.nav-li {
+  position: relative;
+}
+.nav-li:hover:after {
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #188ce8;
+}
 .nav-ul-contacts {
   display: flex;
   margin-left: auto;
@@ -561,7 +576,34 @@ body {
   justify-content: space-between;
 }
 .portf-li-two {
+  position: relative;
   width: 370px;
+}
+.portf-a {
+}
+.portf-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.deskription {
+}
+.deskription-p {
+  height: 100%;
+  position: absolute;
+  background-color: var(--thumb-background-color);
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: var(--white-text-color);
+  bottom: 0;
+  transform: translateY(100%);
+}
+.portf-thumb:hover .deskription-p {
+  transform: translateY(0);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.desk-img {
 }
 .portf-a:hover,
 .portf-a:focus {
@@ -592,4 +634,68 @@ body {
   line-height: 30px;
   letter-spacing: 0.03em;
   color: var(--color-for-contacts);
+}
+.fleks {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+.box {
+  display: block;
+  border: 2px solid black;
+  position: relative;
+  width: 150px;
+  height: 100px;
+  overflow: hidden;
+  background-image: url(../images/sabaka.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.prikol {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 75%;
+  color: white;
+  transform: translateX(-100%);
+}
+.box:hover .prikol {
+  font-family: inherit;
+  transform: translateX(0);
+  transition: 1s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 528px;
+  height: 581px;
+}
+.close-modal {
+  display: block;
+  height: 16px;
+  width: 16px;
 }
