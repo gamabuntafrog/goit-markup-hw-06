@@ -36,12 +36,42 @@
         <section class="sect-one">
                 <h1 class="h1-hero">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
                 <button type="button" class="button-hero" data-modal-open>Заказать услугу</button>
-                            <div class="backdrop" data-modal>
+                            <div class="backdrop is-hidden" data-modal>
                                 <div class="modal">
                                     <button class="modal-button" data-modal-close><svg width="17" height="17" class="modal-close">
                                         <use class="close-modal-use" href="./images/modal-close.svg#icon-close-black"></use>
                                     </svg>
                                     </button>
+                                    <form action="#" class="modal-form">
+                                    <h2 class="modal-h2">Оставьте свои данные, мы вам перезвоним</h2>
+                                    <label class="form-offer">
+                                        <p class="form-prompt">Имя</p>
+                                        <input type="name" class="modal-input">
+
+                                    </label>
+                                    
+                                    <label class="form-offer">
+                                        <p class="form-prompt">Телефон</p>
+                                        <input type="tel" class="modal-input">
+                                    </label>
+                                    <label class="form-offer">
+                                        <p class="form-prompt">Почта</p>
+                                        <input type="email" class="modal-input">
+                                    </label>
+                                    <label>
+                                        <p class="form-prompt">Feedback</p>
+                                        <textarea name="feedback"  placeholder="Введите текст" class="feedback"></textarea>
+                                    </label>
+                                    <label class="conditions">
+                                    <input type="checkbox" > 
+                                    <p class="accept">Соглашаюсь с рассылкой и принимаю 
+                                        <span class="blue-underline">Условия договора</span>
+                                    </p>
+                                    </label>
+                                    <label class="send-label">
+                                    <button type="submit" class="send">Отправить</button>
+                                    <label>
+                                    </form>
                                 </div>
                             </div>
         </section>
@@ -309,6 +339,22 @@
                             </svg></a>
                     </li>
                 </ul>
+                </div>
+                <div class="mailing-container">
+                    <h2 class="h2-footer">Подпишитесь на рассылку</h2>
+                    <div class="mailing-flex-container">
+                    <input class="mailing-input" type="email" placeholder="E-mail">
+                    <button type="submit" class="mailing-button">Подписаться
+                        <a class="footer-send-offer">
+                        <svg width="24px" height="24px" class="footer-send">
+                            <use href="./images/telegram.svg#icon-icon-send" width="24px" height="24px">
+
+                            </use>
+                        </svg>
+                        </a>
+    
+                    </button>
+                    </div>
                 </div>
             </div>
         </footer>
