@@ -396,7 +396,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color, background-color;
+  transition-property: color, background-color, fill;
 }
 .svg-link-icons:hover,
 .svg-link-icons:focus {
@@ -453,7 +453,7 @@ body {
   fill: var(--standart-backg-icon-color);
   cursor: pointer;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: fill;
+  transition-property: fill, border;
 }
 .svg-clients-offer:hover,
 .svg-clients-offer:focus {
@@ -551,7 +551,7 @@ body {
 }
 
 .mailing-container {
-  margin-left: 93px;
+  margin-left: auto;
 }
 .mailing-input {
   width: 358px;
@@ -625,6 +625,7 @@ body {
   padding: 6px 22px;
   font-family: inherit;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, backgoround-color, box-shadow;
 }
 .sect-one-button:hover,
 .sect-one-button:focus {
@@ -644,7 +645,6 @@ body {
 }
 .portf-ul-two {
   background: var(--white-text-color);
-
   box-sizing: border-box;
   list-style-type: none;
   display: flex;
@@ -657,13 +657,15 @@ body {
   position: relative;
   width: 370px;
 }
-.portf-a {
-}
+
 .portf-thumb {
   position: relative;
   overflow: hidden;
 }
-
+.portf-a:hover .deskription-p,
+.portf-a:focus .deskription-p {
+  transform: translateY(0);
+}
 .deskription-p {
   height: 100%;
   position: absolute;
@@ -676,6 +678,7 @@ body {
   bottom: 0;
   transform: translateY(100%);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow, transform;
 }
 .portf-thumb:hover .deskription-p {
   transform: translateY(0);
@@ -723,14 +726,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  transition-duration: 1s;
+  transition-duration: 1000ms;
   z-index: 1;
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  transition-duration: 1000ms;
-  transform: translate(25%);
+  visibility: hidden;
 }
 .modal-button {
   position: absolute;
@@ -745,6 +747,9 @@ body {
   border-radius: 50%;
   cursor: pointer;
   background-color: white;
+}
+.modal-button:hover .modal-close {
+  fill: var(--hover-text-color);
 }
 
 .modal {
@@ -769,8 +774,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.modal-form {
-}
+
 .form-offer:not(:first-child) {
   margin-top: 12px;
 }
@@ -790,19 +794,42 @@ body {
   color: var(--color-for-contacts);
   letter-spacing: 0.01em;
 }
+.input-offer {
+  position: relative;
+}
+.input-offer:hover .modal-input,
+.input-offer:focus .modal-input {
+  border: 1px solid var(--hover-text-color);
+}
+.input-offer:hover .modal-svgs {
+  fill: var(--hover-text-color);
+}
+.modal-input:focus + .modal-svgs {
+  fill: var(--hover-text-color);
+}
+
 .modal-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
   width: 448px;
   height: 40px;
+  cursor: pointer;
 }
 
-.close-modal:hover {
-  background-color: gainsboro;
+.modal-svgs:hover {
+  fill: var(--hover-text-color);
+}
+.modal-svgs {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3%;
+  fill: currentColor;
 }
 
 .feedback {
+  cursor: pointer;
   padding: 12px 16px;
   width: 448px;
   height: 120px;
@@ -815,11 +842,41 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
+.input-offer:hover .feedback {
+  border: 1px solid var(--hover-text-color);
+}
 .conditions {
   margin-top: 20px;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
+}
+.checkbox-offer {
+  background-color: blue;
+}
+.checkbox {
+  visibility: hidden;
+  width: 16px;
+  height: 15px;
+  background: none;
+}
+.checkbox:checked + .custom-checkbox {
+  background-color: #188ce8;
+  background-image: url(../images/Vector.svg);
+  background-position: center;
+
+  background-repeat: no-repeat;
+  border: none;
+}
+.custom-checkbox {
+  cursor: pointer;
+  width: 16px;
+  height: 15px;
+  content: "";
+  background: none;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  position: absolute;
 }
 .accept {
   margin-left: 7px;
@@ -834,6 +891,7 @@ body {
 }
 
 .send {
+  color: var(--white-text-color);
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
