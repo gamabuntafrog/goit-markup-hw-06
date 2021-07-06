@@ -1,6 +1,5 @@
-/* font-family: "Raleway", sans-serif;
-font-family: "Roboto", sans-serif;
-*/
+@import "./utils/varibales";
+
 a {
   text-decoration: none;
   color: inherit;
@@ -61,10 +60,10 @@ body {
   margin-right: auto;
   padding: 0 15px;
 }
+
 .header {
   width: 100%;
   border-bottom: 1px solid #ececec;
-  background-color: white;
 }
 .header__container {
   display: flex;
