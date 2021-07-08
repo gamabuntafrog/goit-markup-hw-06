@@ -1,0 +1,46 @@
+.we-are-doing {
+  @extend %padding;
+}
+.we-are-doing__title {
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $standart-text-color;
+  margin-bottom: 50px;
+}
+.our-advantages__desc {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: $contacts-color;
+}
+
+.we-are-doing__list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+.we-are-doing__item {
+  position: relative;
+}
+.we-are-doing__desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 27px 0;
+  width: 100%;
+  text-align: center;
+  background-color: $we-are-doing-background;
+  color: white;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.we-are-doing__item:not(:last-child) {
+  margin-right: 30px;
+}

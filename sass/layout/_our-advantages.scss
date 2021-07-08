@@ -1,0 +1,38 @@
+.our-advantages {
+  padding-top: 94px;
+}
+
+.our-advantages__svg {
+  align-self: center;
+  width: 70px;
+  height: 70px;
+}
+
+.our-advantages__list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+.our-advantages__item:not(:last-child) {
+  margin-right: 30px;
+}
+.our-advantages__svg-container {
+  background-color: $our-team-background;
+  border-radius: 3%;
+  height: 120px;
+  @extend %justify;
+  align-items: center;
+}
+.our-advantages__svg {
+  align-self: center;
+  width: 70px;
+  height: 70px;
+}
+.our-advantages__lead {
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: $standart-text-color;
+  margin-bottom: 10px;
+}

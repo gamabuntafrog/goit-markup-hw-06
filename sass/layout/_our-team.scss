@@ -1,0 +1,91 @@
+.our-team {
+  background: $our-team-background;
+  @extend %padding;
+}
+
+.our-team__list {
+  margin-top: 50px;
+  list-style-type: none;
+  display: flex;
+}
+
+.our-team__title {
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $standart-text-color;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.our-team__item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background: $alternative-text-color;
+  width: 270px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.our-team__wrapper {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.our-team__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.our-team__position {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: $contacts-color;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.our-team__svg-list {
+  @extend %justify;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.our-team__svg-icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  fill: $background-icon-color;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, fill;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-text-color;
+    border-radius: 50%;
+    fill: $alternative-text-color;
+  }
+}
+
+.our-team__svg-item {
+  fill: $background-icon-color;
+  margin: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  &:hover,
+  &:focus {
+    fill: white;
+    background-size: 44px;
+  }
+}

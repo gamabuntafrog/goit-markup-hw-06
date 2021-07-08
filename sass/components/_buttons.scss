@@ -1,0 +1,84 @@
+.button {
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: $alternative-text-color;
+  background-color: $hover-text-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: none;
+  cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.footer__button {
+  margin-left: 12px;
+  padding-left: 29px;
+  padding-right: 28px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  color: $alternative-text-color;
+  background-color: $hover-text-color;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio__filter-button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $standart-text-color;
+  background: $our-team-background;
+  border-radius: 4px;
+  border-style: solid;
+  border: none;
+  cursor: pointer;
+  padding: 6px 22px;
+  font-family: inherit;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, backgoround-color, box-shadow;
+
+  &:hover,
+  &:focus {
+    color: $alternative-text-color;
+    background: $hover-text-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.section-hero__close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+
+  &:hover .section-hero__modal-close,
+  &:focus .section-hero__modal-close {
+    fill: $hover-text-color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill;
+  }
+}

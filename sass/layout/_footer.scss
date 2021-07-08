@@ -1,0 +1,123 @@
+.footer {
+  background: $background;
+  padding: 60px 0;
+}
+.footer__wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: baseline;
+}
+.footer__svg-item {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $hover-text-color;
+  }
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.footer__svg-icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  fill: $alternative-text-color;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, fill;
+
+  &:hover {
+    background-color: var(--hover-text-color);
+  }
+  &:focus {
+    background-color: var(--hover-text-color);
+  }
+}
+
+.footer__svg-list {
+  display: flex;
+  align-content: flex-end;
+  margin-top: 20px;
+}
+.footer__links-container {
+  margin-left: 70px;
+}
+.footer__title {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer__adress {
+  margin: 0;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $alternative-text-color;
+  letter-spacing: 0.03em;
+}
+.contacts-mailto-footer,
+.contacts-tel-footer,
+.contacts-mailto-footer,
+.contacts-tel-footer .contacts-mailto-footer {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-tel-footer:hover,
+.contacts-mailto-footer:focus,
+.contacts-tel-footer:focus,
+.contacts-mailto-footer:hover {
+  color: $footer-text-color;
+}
+.footer__list {
+  margin-top: 9px;
+  padding: 0;
+}
+.footer__item {
+  list-style-type: none;
+
+  &:last-child {
+    margin-top: 9px;
+  }
+}
+
+.footer__mailing-container {
+  margin-left: auto;
+}
+.footer__input {
+  color: white;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: none;
+  padding-left: 16px;
+}
+
+.footer__svg {
+  fill: currentColor;
+  margin-left: 10px;
+}
+
+.footer__mailing-wrapper {
+  margin-top: 20px;
+  display: flex;
+}

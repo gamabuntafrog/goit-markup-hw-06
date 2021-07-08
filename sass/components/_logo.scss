@@ -1,0 +1,20 @@
+.logo {
+  text-decoration: none;
+  color: $standart-text-color;
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  display: flex;
+}
+
+.logo__span {
+  color: $hover-text-color;
+}
+
+.footer__logo {
+  color: $hover-text-color;
+}
+.footer__span {
+  color: $alternative-text-color;
+}
