@@ -295,7 +295,7 @@
   .header__navigation {
     display: flex;
     // justify-content: space-between;
-    padding-right: 15px;
+    padding-right: 0px;
   }
 }
 
@@ -360,8 +360,9 @@
   }
   .header__navigation {
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
     // padding-right: 15px;
+    width: 100%;
   }
 
   .header__mobile-button {
@@ -389,7 +390,8 @@
   .header__mobile-menu {
     display: flex;
     height: 80px;
-
+    justify-content: space-between;
+    width: 100%;
     // padding-left: 40px;
     // padding-top: 48px;
     // padding-bottom: 40px;
@@ -408,7 +410,7 @@
     // }
   }
   .header__list {
-    margin-right: 305px;
+    // margin-right: 305px;
 
     height: 80px;
     display: flex;

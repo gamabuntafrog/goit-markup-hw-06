@@ -184,7 +184,7 @@
     border: none;
   }
   .section-hero__checkbox-label {
-    margin-left: 15px;
+    // margin-right: 15px;
     width: 16px;
     height: 15px;
     position: relative;
@@ -203,8 +203,8 @@
   }
   .section-hero__accept {
     margin-left: 7px;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 14px;
     letter-spacing: 0.03em;
     color: $contacts-color;
   }
@@ -312,24 +312,6 @@
     visibility: hidden;
   }
 
-  .section-hero__modal {
-    position: absolute;
-    background: #ffffff;
-    color: $standart-text-color;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition-duration: 1000ms;
-    transition-property: translate, opacity;
-    padding: 40px;
-    max-width: 450px;
-    max-height: 609px;
-    width: 95%;
-    height: 950%;
-  }
   .section-hero__subtitle {
     font-size: 20px;
     line-height: 23px;
@@ -512,6 +494,27 @@
     line-height: 42px;
     letter-spacing: 0.06em;
     color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .section-hero__modal {
+    position: absolute;
+    background: #ffffff;
+    color: $standart-text-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 1000ms;
+    transition-property: translate, opacity;
+    padding: 40px;
+    max-width: 521px;
+    max-height: 609px;
+    width: 95%;
+    height: 98%;
   }
 }
 

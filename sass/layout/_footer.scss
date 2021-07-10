@@ -121,7 +121,7 @@
   }
 
   .footer__mailing-container {
-    max-width: 480px;
+    max-width: 450px;
     width: 97%;
     margin: 0 auto;
     display: flex;
@@ -160,7 +160,7 @@
   }
 
   .footer__mailing-wrapper {
-    max-width: 480px;
+    max-width: 450px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -196,15 +196,7 @@
     margin-left: auto;
     align-items: baseline;
   }
-  .footer__mailing-container {
-    width: 450px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
 
-    align-self: center;
-    min-width: 300px;
-  }
   .footer__svg-item {
     display: block;
     width: 44px;
@@ -335,6 +327,17 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__mailing-container {
+    width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    align-self: center;
+    min-width: 300px;
+  }
+}
 @media screen and (max-width: 1199px) {
   .footer__button {
     margin-top: 20px;
