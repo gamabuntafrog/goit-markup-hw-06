@@ -1,3 +1,15 @@
+@media screen and (max-width: 1200px) {
+  .we-are-doing {
+    display: none;
+  }
+}
+// .container {
+//   width: 1200px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding: 0 15px;
+// }
+
 .we-are-doing {
   @extend %padding;
 }
@@ -43,4 +55,13 @@
 }
 .we-are-doing__item:not(:last-child) {
   margin-right: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
 }

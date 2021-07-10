@@ -1,9 +1,0 @@
-.section {
-  @extend %padding;
-  &.portfolio {
-    background-color: var(--grey-background-color);
-  }
-  &.working {
-    padding-top: 0;
-  }
-}

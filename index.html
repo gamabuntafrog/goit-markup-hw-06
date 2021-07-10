@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,17 +17,44 @@
     <header class="header">
         <div class="container header__container">
             <nav class="header__navigation">
+                <div class="header__wrapper">
                 <a class="logo" href="./index.html"><span class="logo__span">Web</span>Studio</a>
-                <ul class="header__list">
-                    <li class="header__item"><a href="./index.html" class="header__link current">Студия</a></li>
-                    <li class="header__item"><a href="./portfolio.html" class="header__link">Портфолио</a></li>
-                    <li class="header__item"><a href="./index.html" class="header__link">Контакты</a></li>
-                </ul>
+                <button type="button" class="header__mobile-button js-open-menu " aria-expanded="false" aria-controls="mobile-menu">
+                    <svg width="40" height="40" class="header__mobile-burger" aria-label="Переключатель мобильного меню">
+                        <use href="./images/menubuttons.svg#icon-menu_40px" class="header__icon-menu"> </use>
+                    </svg>
+                </button>
+                </div>
+            <div class="header__mobile-menu js-menu-container">
+            <ul class="header__list">
+                <li class="header__item"><a href="./index.html" class="header__link current">Студия</a></li>
+                <li class="header__item"><a href="./portfolio.html" class="header__link">Портфолио</a></li>
+                <li class="header__item"><a href="./index.html" class="header__link">Контакты</a></li>
+            </ul>
+            <button type="button" class="header__mobile-button header__close-button js-close-menu">
+                <svg width="40" height="40" class="header__mobile-burger" aria-label="Переключатель мобильного меню">
+                <use href="./images/menubuttons.svg#icon-close_40px" class="header__icon-close"> </use>
+                </svg>
+            </button>
+            <ul class="header__contacts-list">
+                <li class="header__contacts-item"><a href="mailto:info@devstudio.com" class="header__contacts-link"><svg
+                            class="header__contacts-icon-envelope">
+                            <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                        </svg>
+                        info@devstudio.com</a></li>
+                <li class="header__contacts-item"><a href="tel:+380961111111" class="header__contacts-link header__phone"><svg
+                            class="header__contacts-icon-mobile">
+                            <use href="./images/symbol-defs.svg#icon-mobile"></use>
+                        </svg> +38 096 111 11 11</a></li>
+            </ul>
+            <ul class="header__social-network-list">
+                <li class="header__social-network-item"><a href="" class="header__social-network-link">Instagram</a></li>
+                <li class="header__social-network-item"><a href="" class="header__social-network-link">Twitter</a></li>
+                <li class="header__social-network-item"><a href="" class="header__social-network-link">Facebook</a></li>
+                <li class="header__social-network-item"><a href="" class="header__social-network-link">Linkedin</a></li>
+            </ul>
+            </div>
             </nav>
-                <ul class="header__contacts-list">
-                    <li class="header__contacts-item"><a href="mailto:info@devstudio.com" class="header__contacts-link"><svg class="header__contacts-icon-envelope"><use href="./images/symbol-defs.svg#icon-envelope"></use></svg> info@devstudio.com</a></li>
-                    <li class="header__contacts-item"><a href="tel:+380961111111" class="header__contacts-link"><svg class="header__contacts-icon-mobile"><use href="./images/symbol-defs.svg#icon-mobile"></use></svg> +38 096 111 11 11</a></li>
-                </ul>
         </div>
     </header>
     <main>
@@ -146,7 +174,13 @@
                 <h2 class="our-team__title">Наша команда</h2>
                 <ul class="our-team__list">
                     <li class="our-team__item">
-                        <img src="./images/img-2opt.jpg" alt="Igor" width="270">
+                        <picture class="our-team__img">
+                            <source srcset="./images/img-2opt.jpg 1x, ./images/img2opt-2x.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/img-2opt.jpg 1x, ./images/img2opt-2x.jpg 2x" media="(min-width: 320px)">
+                            <img class="our-team__img" src="./images/img-2opt.jpg" alt="Igor" width="" />
+                        </picture>
+                        <!-- <img class="our-team__img" src="./images/img-2opt.jpg" alt="Igor" width=""> -->
                         <div class="our-team__wrapper">
                             <h3 class="our-team__name">Игорь Демьяненко</h3>
                             <p class="our-team__position">Product Designer</p>
@@ -173,7 +207,12 @@
                         </div>
                     </li>
                     <li class="our-team__item">
-                        <img src="./images/img-3opt.jpg" alt="Olga" width="270">
+                        <picture class="our-team__img">
+                            <source srcset="./images/img-3opt.jpg 1x, ./images/img-3opt-2x.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./images/img-3opt.jpg 1x, ./images/img-3opt-2x.jpg 2x" media="(min-width: 320px)">
+                            <img class="our-team__img" src="./images/img-3opt.jpg" alt="Olga" width="">
+                        </picture>
+
                         <div class="our-team__wrapper">
                             <h3 class="our-team__name">Ольга Репина</h3>
                             <p class="our-team__position">Frontend Developer</p>
@@ -202,7 +241,12 @@
                         </div>
                     </li>
                     <li class="our-team__item">
-                        <img src="./images/img-4opt.jpg" alt="Nikolay" width="270">
+                        <picture class="our-team__img">
+                            <source srcset="./images/img-4opt.jpg 1x, ./images/img-4opt-2x.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./images/img-4opt.jpg 1x, ./images/img-4opt-2x.jpg 2x" media="(min-width: 320px)">
+                        <img class="our-team__img" src="./images/img-4opt.jpg" alt="Nikolay" width="">                        
+                        </picture>
+
                         <div class="our-team__wrapper">
                             <h3 class="our-team__name">Николай Тарасов</h3>
                             <p class="our-team__position">Marketing</p>
@@ -231,7 +275,12 @@
                         </div>
                     </li>
                     <li class="our-team__item">
-                        <img src="./images/img-5opt.jpg" alt="michael" width="270">
+                        <picture class="our-team__img">
+                            <source srcset="./images/img-5opt.jpg 1x, ./images/img-5opt-2x.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./images/img-5opt.jpg 1x, ./images/img-5opt-2x.jpg 2x" media="(min-width: 320px)">
+                            <img class="our-team__img" src="./images/img-5opt.jpg" alt="michael" width="">
+                        </picture>
+
                         <div class="our-team__wrapper">
                             <h3 class="our-team__name">Михаил Ермаков</h3>
                             <p class="our-team__position">UI Designer</p>
@@ -268,43 +317,43 @@
             <ul class="our-clients__clients-list">
                 <li class="our-clients__client-item">
                     <a href="" class="our-clients__svg-wrapper">
-                        <svg width="170px" height="92px">
-                            <use href="./images/clients-svg.svg#icon-Client-1" width="170px" height="92px"></use>
+                        <svg width="106" height="60" class="our-clients__svg">
+                            <use href="./images/clients-svg.svg#icon-Client-1" ></use>
                         </svg>
                     </a>
                 </li>
                 <li class="our-clients__client-item">
                     <a href="" class="our-clients__svg-wrapper">
-                        <svg width="170px" height="92px">
-                            <use href="./images/clients-svg.svg#icon-Client-2" width="170px" height="92px"></use>
+                        <svg width="106" height="60" class="our-clients__svg">
+                            <use href="./images/clients-svg.svg#icon-Client-2" ></use>
                         </svg>
                     </a>
                 </li>
                 <li class="our-clients__client-item">
                     <a href="" class="our-clients__svg-wrapper">
-                        <svg width="170px" height="92px">
-                            <use href="./images/clients-svg.svg#icon-Client-3" width="170px" height="92px"></use>
+                        <svg width="106" height="60" class="our-clients__svg">
+                            <use href="./images/clients-svg.svg#icon-Client-3" ></use>
                         </svg>
                     </a>
                 </li>
                 <li class="our-clients__client-item">
                     <a href="" class="our-clients__svg-wrapper">
-                        <svg width="170px" height="92px">
-                            <use href="./images/clients-svg.svg#icon-Client-4" width="170px" height="92px"></use>
+                        <svg width="106" height="60" class="our-clients__svg">
+                            <use href="./images/clients-svg.svg#icon-Client-4" ></use>
                         </svg>
                     </a>
                 </li>
                 <li class="our-clients__client-item">
                     <a href="" class="our-clients__svg-wrapper">
-                        <svg width="170px" height="92px">
-                            <use href="./images/clients-svg.svg#icon-Client-5" width="170px" height="92px"></use>
+                        <svg width="106" height="60" class="our-clients__svg">
+                            <use href="./images/clients-svg.svg#icon-Client-5" ></use>
                         </svg>
                     </a>
                 </li>
                 <li class="our-clients__client-item">
                     <a href="" class="our-clients__svg-wrapper">
-                        <svg width="170px" height="92px">
-                            <use href="./images/clients-svg.svg#icon-Client-6" width="170px" height="92px"></use>
+                        <svg width="106" height="60" class="our-clients__svg">
+                            <use href="./images/clients-svg.svg#icon-Client-6" ></use>
                         </svg>
                     </a>
                 </li>
@@ -316,7 +365,7 @@
             <div class="footer__wrapper">
                 <div class="footer__adress-container">
                 <a href="google.com" class="logo footer__logo">Web<span class="footer__span">Studio</span></a>
-                <address>
+                <address class="footer__adress-wrapper">
                     <p class="footer__adress">г. Киев, пр-т Леси Украинки, 26</p>
                     <ul class="footer__list">
                         <li class="footer__item"><a href="mailto:info@example.com" class="contacts-mailto-footer">info@example.com</a></li>
@@ -364,7 +413,10 @@
                 </div>
             </div>
         </footer>
-        <script src="./js/modal.js">
-        </script>
+        <script src="./js/modal.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"></script>
+        <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
