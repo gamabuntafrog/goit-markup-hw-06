@@ -102,7 +102,14 @@
     letter-spacing: 0.03em;
     color: $contacts-color;
   }
+  .our-advantages__item {
+    // max-width: 738px;
+    // min-width: 300px;
 
+    max-width: 350px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .our-advantages__item {
     // max-width: 738px;
     // min-width: 300px;
@@ -119,12 +126,10 @@
     }
   }
 }
-@media screen and (max-width: 1199px) {
-}
 @media screen and (min-width: 1199px) {
   .our-advantages__item {
     max-width: 270px;
-
+    margin-bottom: 0px;
     &:not(:last-child) {
       margin-right: 30px;
     }

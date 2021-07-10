@@ -5,7 +5,6 @@
     flex-wrap: wrap;
     padding: 0;
     margin-bottom: 50px;
-    justify-content: center;
   }
   .portfolio__filter-item {
     list-style-type: none;
@@ -19,6 +18,7 @@
   }
 
   .portfolio__container {
+    width: 480px;
     padding: 60px 15px;
     margin-left: auto;
     margin-right: auto;
@@ -124,8 +124,11 @@
     &:not(:last-child) {
       margin-right: 8px;
     }
-    &:nth-child(-n + 3) {
-      margin-bottom: 15px;
+
+    @media screen and (max-width: 1199px) {
+      &:nth-child(-n + 3) {
+        margin-bottom: 0px;
+      }
     }
   }
 
@@ -141,7 +144,7 @@
   .portfolio__card-list {
     width: 768px;
     margin-left: -30px;
-
+    margin-bottom: -30px;
     background: $alternative-text-color;
     box-sizing: border-box;
     list-style-type: none;
@@ -233,19 +236,21 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .portfolio__card-list.portf-ul-two {
-    padding: 0 15px;
-  }
+  // .portfolio__card-list.portf-ul-two {
+  //   padding: 0 15px;
+  // }
   .footer__title {
     align-self: flex-start;
   }
-
+  .portfolio__container {
+    width: 1200px;
+  }
   .footer__mailing-container {
     width: 570px;
     min-width: 300px;
   }
   .portfolio__card-list {
-    width: 1200px;
+    width: 100%;
     margin-left: 0px;
     background: $alternative-text-color;
     box-sizing: border-box;
@@ -255,6 +260,7 @@
     padding: 0 15px;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: -30px;
   }
   .portfolio__card-item {
     position: relative;

@@ -16,10 +16,12 @@
     color: $standart-text-color;
     box-sizing: border-box;
     margin: 0 auto;
+    margin-bottom: 30px;
   }
   .our-clients__clients-list {
     max-width: 480px;
     margin: 0 auto;
+    margin-top: -30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -83,9 +85,8 @@
   .our-clients__clients-list {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
     margin-left: -30px;
-    margin-bottom: -30px;
+    // justify-content: center;
   }
 
   .our-clients__client-item {
@@ -133,6 +134,9 @@
       padding-right: 15px;
       padding-left: 15px;
     }
+    .our-clients__clients-list {
+      margin-bottom: -30px;
+    }
   }
 }
 
@@ -140,9 +144,11 @@
   .our-clients {
     padding: 94px 0px;
   }
-
+  .our-clients__client-list {
+    margin-bottom: 0px;
+  }
   .our-clients__client-item {
-    margin-top: 30px;
+    margin-bottom: 0px;
     cursor: pointer;
     max-width: 170px;
     height: 92px;
@@ -150,5 +156,9 @@
     //   &:not(:last-child) {
     //     margin-right: 30px;
     //   }
+
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
   }
 }
