@@ -2475,7 +2475,7 @@ img {
     margin-bottom: 15px;
   }
   .portfolio__container {
-    width: 480px;
+    max-width: 480px;
     padding: 60px 15px;
     margin-left: auto;
     margin-right: auto;
