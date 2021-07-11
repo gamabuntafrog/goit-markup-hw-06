@@ -236,10 +236,11 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
+  .portfolio__card-list {
+    margin-top: -30px;
+  }
   .portfolio__card-item {
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+    margin-top: 30px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -265,6 +266,8 @@
     min-width: 300px;
   }
   .portfolio__card-list {
+    margin-left: -30px;
+    margin-top: -30px;
     width: 1200px;
     margin-left: 0px;
     background: $alternative-text-color;
@@ -275,16 +278,17 @@
     padding: 0 15px;
     flex-wrap: wrap;
     // justify-content: space-between;
-    margin-left: -30px;
   }
   .portfolio__card-item {
+    margin-left: 30px;
+    margin-top: 30px;
     position: relative;
     // width: 370px;
     max-width: 370px;
-    margin-left: 30px;
-    &:not(:nth-child(n + 7)) {
-      margin-bottom: 30px;
-    }
+
+    // &:not(:nth-child(n + 7)) {
+    //   margin-bottom: 30px;
+    // }
   }
 
   .portfolio__thumb {
