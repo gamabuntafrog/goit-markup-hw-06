@@ -2,6 +2,12 @@
   border-bottom: 1px solid #ececec;
 }
 @media screen and (max-width: 767px) {
+  .header__contacts-icon-envelope {
+    display: none;
+  }
+  .header__contacts-icon-mobile {
+    display: none;
+  }
   body {
     max-width: 768px;
     min-width: 200px;
